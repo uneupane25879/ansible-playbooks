@@ -8,6 +8,9 @@
 
     - name : Upload default index.html for host
       copy : src=static_files/index.nginx-debian.html dest=/var/www/html/ mode=0644
+
+    - name : Remove all access logs on deployment
+      command: rm -rfv /var/log/nginx/access.log
   handlers:
     - name: start nginx
       service: name=nginx state=started
