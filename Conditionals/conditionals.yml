@@ -3,4 +3,4 @@
   tasks:
     - name: Shutdown Debian Based systems
       command: /sbin/shutdown -t now
-      when: ansible_os_family == "Ubuntu"
+      when: ansible_os_family == "Ubuntu" and ansible_distribution_release == 'xenial'
