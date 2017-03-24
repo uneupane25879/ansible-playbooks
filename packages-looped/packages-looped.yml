@@ -2,7 +2,7 @@
 - hosts: webserver
   tasks:
     - name: Install packages
-      apt: name={{ item }} state=absent
+      apt: name={{ item }} state=latest
       with_items: 
         - vim
         - git 
