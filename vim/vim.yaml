@@ -1,0 +1,7 @@
+--- 
+- hosts: webserver
+  vars:
+    package: vim
+  tasks: 
+    - name: Install the package defined in the variable above
+      apt: name={{ package }} state=latest
