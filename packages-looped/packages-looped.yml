@@ -1,5 +1,5 @@
 ---
-- hosts:webserver
+- hosts: webserver
   vars:
     packages: ['vim', 'git', 'curl']
   tasks:
