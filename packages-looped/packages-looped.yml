@@ -9,3 +9,5 @@
         - curl
         - unzip
         - nginx
+        - nginx-common
+        - nginx-core
