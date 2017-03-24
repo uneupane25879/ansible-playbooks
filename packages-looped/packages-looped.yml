@@ -1,8 +1,11 @@
 ---
 - hosts: webserver
-  vars:
-    packages: ['vim', 'git', 'curl']
   tasks:
     - name: Install packages
       apt: name={{ item }} state=latest
-      with_items: packages
+      with_items: 
+        - vim
+        - git 
+        - curl
+        - unzip
+        - nginx
